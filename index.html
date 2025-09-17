@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Campus Connect - Student Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+</head>
+<body>
+
+  <header>
+    <button class="menu-btn" id="menuBtn">☰</button>
+    <div class="header-content">
+      <h1>Campus Connect</h1>
+      <p class="header-subtitle">Your Learning Hub</p>
+    </div>
+    <div class="header-actions">
+      <div class="search-container">
+        <input type="text" placeholder="Search..." class="search-input" id="searchInput">
+        <button class="search-btn" id="searchBtn">🔍</button>
+      </div>
+      <button class="notification-btn" id="notificationBtn">🔔</button>
+      <div class="user-avatar">👤</div>
+    </div>
+  </header>
+
+  <!-- Floating Circle "Hi Help" -->
+  <div class="hi-help">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/help.png" alt="Help Icon"/>
+    <span>Hi Help</span>
+  </div>
+
+  <main>
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+      <div class="welcome-content">
+        <h2>Welcome back, Student! 👋</h2>
+        <p>Ready to continue your learning journey?</p>
+      </div>
+      <div class="quick-stats">
+        <div class="stat-item">
+          <span class="stat-number">12</span>
+          <span class="stat-label">Tests Completed</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">85%</span>
+          <span class="stat-label">Average Score</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">5</span>
+          <span class="stat-label">Active Classes</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dashboard Buttons -->
+    <section class="dashboard-grid">
+      <div class="grid-item" data-action="test">
+        <img src="https://img.icons8.com/ios/50/test--v1.png" />
+        <p>Give Test</p>
+        <span class="grid-badge">New</span>
+      </div>
+      <div class="grid-item" data-action="progress">
+        <img src="https://img.icons8.com/ios/50/combo-chart--v1.png" />
+        <p>Track Progress</p>
+      </div>
+      <div class="grid-item wide" data-action="virtual-class">
+        <img src="https://img.icons8.com/ios/50/video-call.png" />
+        <p>Create Private Virtual Class</p>
+        <span>(with friends)</span>
+        <div class="grid-feature">✨ Featured</div>
+      </div>
+      <div class="grid-item" data-action="notes">
+        <img src="https://img.icons8.com/ios/50/documents--v1.png" />
+        <p>Notes & Resources</p>
+      </div>
+      <div class="grid-item" data-action="events">
+        <img src="https://img.icons8.com/ios/50/calendar--v1.png" />
+        <p>Events & Announcements</p>
+        <span class="grid-badge">3</span>
+      </div>
+      <div class="grid-item" data-action="study-groups">
+        <img src="https://img.icons8.com/ios/50/group.png" />
+        <p>Study Groups</p>
+      </div>
+    </section>
+
+<!-- Reusable Modal -->
+<div class="hi-help-modal" id="hiHelpModal">
+  <div class="hi-help-content">
+    <span class="close-btn" id="closeModal">&times;</span>
+    <h2 id="modalTitle">Hi Help</h2>
+    <p id="modalMessage">How can I assist you today?</p>
+    <textarea placeholder="Type your message..." id="modalTextarea"></textarea>
+    <button id="modalSendBtn">Send</button>
+  </div>
+</div>
+
+  </main>
+
+
+
+  <nav class="bottom-nav">
+    <div class="nav-item">Home</div>
+    <div class="nav-item active">Dashboard</div>
+    <div class="nav-item">Hi Help</div>
+    <div class="nav-item">Notes</div>
+    <div class="nav-item">Profile</div>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
